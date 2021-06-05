@@ -1,7 +1,121 @@
 .navbar {
-  height: 8vh;
+  height: 3.5rem;
   width: 100%;
-  z-index: 5;
-  background: transparent;
+  z-index: 500;
+  background: $gradient-main;
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: $color-dark;
+  transition: 1s all;
+}
+
+.routes {
+  width: 30%;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1400px) {
+    width: 50%;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+      list-style-type: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.nav_button {
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+}
+
+.contact {
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+
+.burger-container {
+  position: absolute;
+  top: 50%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 12%;
+  z-index: 610;
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}
+
+.burger-box {
+  width: 2.8rem;
+  height: 2.8rem;
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media only screen and (min-width: 700px) {
+    display: none;
+  }
+}
+
+.burger-relative {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  position: absolute;
+  display: block;
+  height: 2px;
+  background: #fff;
+  width: 27px;
+  left: 0px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.5s;
+}
+
+.bar1 {
+  top: 16px;
+}
+
+.bar2 {
+  top: 24px;
+}
+
+.bar3 {
+  top: 32px;
+}
+
+.change .bar1 {
+  top: 25px;
+  transform: rotateZ(320deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+  transform: translateX(5px);
+}
+
+.change .bar3 {
+  top: 25px;
+  transform: rotateZ(-320deg);
 }

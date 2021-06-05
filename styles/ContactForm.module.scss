@@ -1,0 +1,140 @@
+@import "variables.scss";
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background: $gradient-main;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0;
+  visibility: hidden;
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+
+    input {
+      font-size: 1.2rem;
+      padding: 0.7rem 0;
+      margin: 1rem 0;
+      width: 17vw;
+      background: transparent;
+      outline: none;
+      border: 2px solid $color-dark;
+      border-radius: 1.5rem;
+      padding-left: 1rem;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 1.1rem;
+        width: 30vw;
+      }
+
+      @media screen and (max-width: 830px) {
+        font-size: 1.1rem;
+        width: 35vw;
+      }
+      @media screen and (max-width: 410px) {
+        width: 55vw;
+        font-size: 1.3rem;
+      }
+
+      &::placeholder {
+        opacity: 0.7;
+      }
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.alert {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+  height: 2vh;
+  color: rgb(197, 65, 65);
+
+  @media screen and (max-width: 410px) {
+    font-size: 0.9rem;
+  }
+}
+
+.svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  fill: rgb(197, 65, 65);
+}
+
+.message_sent {
+  background: rgb(231, 231, 231);
+  opacity: 0.6;
+  cursor: default;
+  &:hover {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.close_btn {
+  position: absolute;
+  top: 0.7rem;
+  right: 2rem;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: 2%;
+  text-transform: uppercase;
+}
+
+.mail_svg {
+  height: 1.2rem;
+  width: 1.2rem;
+}

@@ -1,0 +1,104 @@
+@import "Variables.scss";
+
+.container {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 8rem 0;
+
+  @media screen and (max-width: 700px) {
+    margin-top: 8rem;
+    margin-bottom: 25rem;
+  }
+}
+
+.content {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 15rem;
+
+  @media screen and (max-width: 1300px) {
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 660px) {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+    padding: 0 2rem;
+    font-size: 1.3rem;
+  }
+  &_sub {
+    font-size: 1.1rem;
+    color: $color-theme;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 950px) {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  &__links {
+    @include s-v-g;
+    margin: 0.9rem;
+    border-radius: 50%;
+    transition: 0.2s;
+
+    &:active {
+      transform: translateY(3px);
+    }
+
+    @media screen and (max-width: 1100px) {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
+
+.about_pic {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  height: 18rem;
+  border-radius: 20%;
+
+  @media screen and (min-width: 820px) {
+    display: none;
+  }
+  @media screen and (max-width: 660px) {
+    display: none;
+  }
+}

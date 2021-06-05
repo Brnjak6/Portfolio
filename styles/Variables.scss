@@ -1,2 +1,9 @@
-$color-light: #d8d8d8;
-$color-dark: #272727;
+$color-light: #dfdfdf;
+$color-dark: #444;
+$gradient-main: linear-gradient(to right, #eacda3, #d6ae7b);
+$color-theme: #d6ae7b;
+
+@mixin s-v-g {
+  width: 3rem;
+  height: 3rem;
+}

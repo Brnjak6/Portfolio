@@ -1,0 +1,42 @@
+@import "Variables.scss";
+
+.container {
+  position: fixed;
+  width: 0vw;
+  height: 0vh;
+  top: 0;
+  right: 0;
+  background: $gradient-main;
+  z-index: 600;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s all ease-in;
+  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 18%);
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    line-height: 5;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $color-light;
+  }
+}
+
+.active {
+  opacity: 1;
+  height: 100vh;
+  width: 100vw;
+  bottom: 0;
+}
