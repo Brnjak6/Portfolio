@@ -1,21 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Projects.module.scss";
 import ReactSvg from "../public/react.svg";
 import Javascript from "../public/javascript.svg";
 import Html from "../public/html-5.svg";
 import Css from "../public/css.svg";
+import { useScroll } from "./useScroll";
+import { motion } from "framer-motion";
+import { itemAppear } from "./Animation";
 
 function Project1() {
+  const [isImageClicked, setIsImageClicked] = useState(false);
+  const [element, controls] = useScroll();
   return (
-    <div className={styles.project_one}>
+    <motion.div
+      variants={itemAppear}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+      className={styles.project_one}
+    >
       <div className={styles.project_title}>
         <h3 className={styles.titles_sub}>Widicy</h3>
         E-commerce website
       </div>
       <div className={styles.first}>
         <div className={styles.first_left}>
-          <div className={styles.first_left_box}>
-            <img src="/firstproject.png" alt="" />
+          <div
+            onClick={() => setIsImageClicked(!isImageClicked)}
+            className={
+              !isImageClicked
+                ? styles.first_left_relative
+                : styles.first_left_absolute
+            }
+          >
+            <img src="/firstproject.png" alt="first project" />
           </div>
         </div>
         <div className={styles.first_right}>
@@ -51,7 +69,7 @@ function Project1() {
           <ReactSvg className={styles.svgs} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

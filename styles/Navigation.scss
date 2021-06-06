@@ -5,13 +5,19 @@
   height: 3.5rem;
   width: 100%;
   z-index: 500;
-  background: $gradient-main;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: var(--color);
+  color: $color-dark;
   transition: 1s all;
+
+  &__top {
+    background: $gradient-main;
+  }
+  &__moving {
+    background: $color-light;
+  }
 }
 
 .routes {
@@ -97,7 +103,7 @@
   position: absolute;
   display: block;
   height: 2px;
-  background: #fff;
+  background: $color-dark;
   width: 27px;
   left: 0px;
   -webkit-transition: all 0.3s;

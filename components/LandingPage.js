@@ -2,10 +2,19 @@ import React from "react";
 import Arrow from "../public/down-arrow.svg";
 import styles from "../styles/LandingPage.module.scss";
 import { Link } from "react-scroll";
+import { useScroll } from "./useScroll";
 import { motion } from "framer-motion";
-import { helloWorld, myName, frontEnd, getStarted } from "./Animation";
+import {
+  helloWorld,
+  myName,
+  frontEnd,
+  getStarted,
+  itemAppear,
+} from "./Animation";
 
 function LandingPage() {
+  const [element, controls] = useScroll();
+
   return (
     <div className={styles.container} id="home">
       <div className={styles.welcome}>
@@ -16,15 +25,15 @@ function LandingPage() {
           <motion.div variants={myName} initial="hidden" animate="show">
             <h2>I am Stjepan</h2>
           </motion.div>
-          <motion.div
-            variants={frontEnd}
-            initial="hidden"
-            animate="show"
-            className={styles.frontend}
-          >
-            Frontend Developer
-          </motion.div>
         </div>
+        <motion.div
+          variants={frontEnd}
+          initial="hidden"
+          animate="show"
+          className={styles.frontend}
+        >
+          Frontend Developer
+        </motion.div>
         <motion.div variants={getStarted} initial="hidden" animate="show">
           <Link
             to="projects"
@@ -38,13 +47,19 @@ function LandingPage() {
         </motion.div>
       </div>
       <div className={styles.image_container}>
-        <div className={styles.image_box}>
+        <motion.div
+          variants={itemAppear}
+          initial="hidden"
+          animate={controls}
+          ref={element}
+          className={styles.image_box}
+        >
           <img
             className={styles.img}
             src="/portfolio.jpg"
             alt="Picture of the author"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

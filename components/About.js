@@ -2,10 +2,22 @@ import React from "react";
 import styles from "../styles/About.module.scss";
 import GitHub from "../public/github.svg";
 import LinkedIn from "../public/linkedin.svg";
+import { useScroll } from "./useScroll";
+import { motion } from "framer-motion";
+import { itemAppear } from "./Animation";
 
 function About() {
+  const [element, controls] = useScroll();
+
   return (
-    <div className={styles.container} id="about">
+    <motion.div
+      variants={itemAppear}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+      className={styles.container}
+      id="about"
+    >
       <div className={styles.content}>
         <h3 className={styles.content_sub}>ABOUT ME</h3>
         <h1>I am Stjepan Brnjak, self taught developer from Croatia</h1>
@@ -34,7 +46,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

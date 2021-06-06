@@ -1,20 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Projects.module.scss";
 import Javascript from "../public/javascript.svg";
 import Html from "../public/html-5.svg";
 import Css from "../public/css.svg";
 import Sass from "../public/sass.svg";
+import { useScroll } from "./useScroll";
+import { motion } from "framer-motion";
+import { itemAppear } from "./Animation";
 
 function Project4() {
+  const [isImageClicked, setIsImageClicked] = useState(false);
+  const [element, controls] = useScroll();
+
   return (
-    <div className={styles.project_one}>
+    <motion.div
+      variants={itemAppear}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+      className={styles.project_one}
+    >
       <div className={styles.project_title}>
         <h3 className={styles.titles_sub}>Tech & Challenges</h3>
         Vanilla JavaScript and DOM Manipulation
       </div>
       <div className={styles.first} style={{ flexDirection: "row-reverse" }}>
         <div className={styles.first_left}>
-          <div className={styles.first_left_box}>
+          <div
+            onClick={() => setIsImageClicked(!isImageClicked)}
+            className={
+              !isImageClicked
+                ? styles.first_left_relative
+                : styles.first_left_absolute
+            }
+          >
             <img src="/fourthproject.png" alt="third-project-picture" />
           </div>
         </div>
@@ -57,7 +76,7 @@ function Project4() {
           <Sass className={styles.svgs} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

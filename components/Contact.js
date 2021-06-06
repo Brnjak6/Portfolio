@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { send } from "emailjs-com";
 import styles from "../styles/Contact.module.scss";
 import Alert from "../public/alert.svg";
+import { useScroll } from "./useScroll";
+import { motion } from "framer-motion";
+import { input1, input2, input3, itemAppear } from "./Animation";
 
 function Contact() {
   const [checkName, setCheckName] = useState("");
@@ -10,6 +13,7 @@ function Contact() {
   const [alertName, setAlertName] = useState(false);
   const [alertMessage, setAlertMessage] = useState(false);
   const [alertMail, setAlertMail] = useState(false);
+  const [element, controls] = useScroll();
   const [contactButton, setContactButton] = useState("Contact");
   const mailformat =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -99,7 +103,11 @@ function Contact() {
         </h3>
       </div>
       <form onSubmit={onSubmit}>
-        <input
+        <motion.input
+          variants={input1}
+          initial="hidden"
+          animate={controls}
+          ref={element}
           type={contactButton === "Contact" ? "text" : undefined}
           name="from_name"
           placeholder="Your name"
@@ -110,7 +118,11 @@ function Contact() {
           {alertName === false ? null : alertName}
           {alertName !== false ? <Alert className={styles.svg} /> : null}
         </div>
-        <input
+        <motion.input
+          variants={input2}
+          initial="hidden"
+          animate={controls}
+          ref={element}
           type="text"
           name="message"
           placeholder="Your message"
@@ -121,7 +133,11 @@ function Contact() {
           {alertMessage === false ? null : alertMessage}
           {alertMessage !== false ? <Alert className={styles.svg} /> : null}
         </div>
-        <input
+        <motion.input
+          variants={input3}
+          initial="hidden"
+          animate={controls}
+          ref={element}
           type="text"
           name="reply_to"
           placeholder="Your email"
@@ -132,14 +148,18 @@ function Contact() {
           {alertMail === false ? null : alertMail}
           {alertMail !== false ? <Alert className={styles.svg} /> : null}
         </div>
-        <button
+        <motion.button
+          variants={itemAppear}
+          initial="hidden"
+          animate={controls}
+          ref={element}
           type={contactButton === "Contact" ? "submit" : "button"}
           className={
             contactButton === "Message sent!" ? styles.message_sent : null
           }
         >
           {contactButton}
-        </button>
+        </motion.button>
       </form>
       <div className={styles.copyrights}>
         Copyright &#169; Stjepan Brnjak. All Rights Reserved

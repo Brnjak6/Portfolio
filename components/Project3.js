@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Projects.module.scss";
 import Javascript from "../public/javascript.svg";
 import Html from "../public/html-5.svg";
 import Css from "../public/css.svg";
 import Sass from "../public/sass.svg";
 import Figma from "../public/figma-1.svg";
+import { useScroll } from "./useScroll";
+import { motion } from "framer-motion";
+import { itemAppear } from "./Animation";
 
 function Project3() {
+  const [isImageClicked, setIsImageClicked] = useState(false);
+  const [element, controls] = useScroll();
+
   return (
-    <div className={styles.project_one}>
+    <motion.div
+      variants={itemAppear}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+      className={styles.project_one}
+    >
       <div className={styles.project_title}>
         <h3 className={styles.titles_sub}>Go-Master</h3>
         Beginner's guide to PC components
       </div>
       <div className={styles.first}>
         <div className={styles.first_left}>
-          <div className={styles.first_left_box}>
+          <div
+            onClick={() => setIsImageClicked(!isImageClicked)}
+            className={
+              !isImageClicked
+                ? styles.first_left_relative
+                : styles.first_left_absolute
+            }
+          >
             <img src="/thirdproject.png" alt="third-project-picture" />
           </div>
         </div>
@@ -52,7 +71,7 @@ function Project3() {
           <Figma className={styles.svgs} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

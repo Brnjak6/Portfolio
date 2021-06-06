@@ -76,14 +76,15 @@
       width: 100%;
       display: block;
     }
-    &_box {
-      width: fit-content;
+    &_relative {
+      width: 95%;
       background: $color-dark;
       height: 52%;
       position: relative;
       border: 5px solid $color-dark;
       transition: 0.2s;
       object-fit: cover;
+      cursor: pointer;
       @media screen and (max-width: 1640px) {
         width: 83%;
       }
@@ -91,6 +92,27 @@
         width: 100%;
         height: 50vh;
       }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &_absolute {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: $color-dark;
+      z-index: 1100;
+      cursor: pointer;
+      border: 5px solid $color-dark;
+      transition: 0.2s;
+      object-fit: cover;
 
       img {
         width: 100%;
@@ -116,10 +138,14 @@
 }
 
 .button_links {
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-evenly;
   padding: 0 8rem 0 8rem;
+
+  @media screen and (max-width: 1640px) {
+    width: 83%;
+  }
 
   @media screen and (max-width: 500px) {
     padding: 0 1rem 0 1rem;

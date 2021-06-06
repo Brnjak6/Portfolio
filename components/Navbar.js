@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BurgerMenu from "./BurgerMenu";
 import { Link } from "react-scroll";
 import ContactForm from "./ContactForm";
-import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [burgerActive, setBurgerActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const [scrollState, setScrollState] = useState("top");
+  let listener = null;
+
+  useEffect(() => {
+    listener = document.addEventListener("scroll", () => {
+      var scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 120 && scrolled <= 6500) {
+        if (scrollState !== "moving") {
+          setScrollState("moving");
+        }
+      } else {
+        if (scrollState !== "top") {
+          setScrollState("top");
+        }
+      }
+    });
+    return () => {
+      document.removeEventListener("scroll", listener);
+    };
+  }, [scrollState]);
 
   const burgerHandler = () => {
     setBurgerActive(!burgerActive);
@@ -19,7 +37,11 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div
+        className={`${"navbar"} ${
+          scrollState === "top" ? "navbar__top" : "navbar__moving"
+        }`}
+      >
         <div className="routes">
           <ul>
             <li>
