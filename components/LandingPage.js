@@ -16,8 +16,13 @@ function LandingPage() {
           <motion.div variants={myName} initial="hidden" animate="show">
             <h2>I am Stjepan</h2>
           </motion.div>
-          <motion.div variants={frontEnd} initial="hidden" animate="show">
-            <div className={styles.frontend}>Frontend Developer</div>{" "}
+          <motion.div
+            variants={frontEnd}
+            initial="hidden"
+            animate="show"
+            className={styles.frontend}
+          >
+            Frontend Developer
           </motion.div>
         </div>
         <motion.div variants={getStarted} initial="hidden" animate="show">
