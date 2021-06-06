@@ -42,6 +42,14 @@
   }
 }
 
+[data-theme="dark"] .container {
+  background: $gradient-secondary;
+
+  ul a {
+    background: $color-grey;
+  }
+}
+
 .active {
   opacity: 1;
   height: 100vh;
