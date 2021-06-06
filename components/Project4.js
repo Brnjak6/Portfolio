@@ -52,7 +52,7 @@ function Project4() {
         style={{ flexDirection: "row-reverse" }}
       >
         <div className={styles.button_links}>
-          <button>
+          <button className={styles.btn}>
             <a
               href="https://interactive-javascript.netlify.app/"
               target="_blank"
@@ -60,7 +60,7 @@ function Project4() {
               Demo
             </a>
           </button>
-          <button>
+          <button className={styles.btn}>
             <a
               href="https://github.com/Brnjak6/VanillaJS-PCParts"
               target="_blank"

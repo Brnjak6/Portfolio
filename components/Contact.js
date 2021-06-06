@@ -104,6 +104,7 @@ function Contact() {
       </div>
       <form onSubmit={onSubmit}>
         <motion.input
+          className={styles.inpt}
           variants={input1}
           initial="hidden"
           animate={controls}
@@ -119,6 +120,7 @@ function Contact() {
           {alertName !== false ? <Alert className={styles.svg} /> : null}
         </div>
         <motion.input
+          className={styles.inpt}
           variants={input2}
           initial="hidden"
           animate={controls}
@@ -134,6 +136,7 @@ function Contact() {
           {alertMessage !== false ? <Alert className={styles.svg} /> : null}
         </div>
         <motion.input
+          className={styles.inpt}
           variants={input3}
           initial="hidden"
           animate={controls}
@@ -155,7 +158,7 @@ function Contact() {
           ref={element}
           type={contactButton === "Contact" ? "submit" : "button"}
           className={
-            contactButton === "Message sent!" ? styles.message_sent : null
+            contactButton === "Message sent!" ? styles.message_sent : styles.btn
           }
         >
           {contactButton}

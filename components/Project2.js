@@ -56,12 +56,12 @@ function Project2() {
         style={{ flexDirection: "row-reverse" }}
       >
         <div className={styles.button_links}>
-          <button>
+          <button className={styles.btn}>
             <a href="https://film-verse-react.netlify.app/" target="_blank">
               Demo
             </a>
           </button>
-          <button>
+          <button className={styles.btn}>
             <a href="https://github.com/Brnjak6/MovieTrends" target="_blank">
               Source
             </a>

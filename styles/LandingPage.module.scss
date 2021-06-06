@@ -10,6 +10,10 @@
   clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
 }
 
+[data-theme="dark"] .container {
+  background: $gradient-secondary;
+}
+
 .welcome {
   width: 50%;
 
@@ -58,6 +62,14 @@
   }
 }
 
+[data-theme="dark"] .welcome_started {
+  color: $color-light;
+}
+
+[data-theme="dark"] .welcome_started_arrow {
+  fill: $color-light;
+}
+
 .frontend {
   width: 100vw;
   height: 8vh;
@@ -92,6 +104,11 @@
   @media screen and (max-width: 340px) {
     width: 85%;
   }
+}
+
+[data-theme="dark"] .frontend {
+  color: $color-dark;
+  font-weight: 300;
 }
 
 .image_container {

@@ -52,12 +52,12 @@ function Project3() {
       </div>
       <div className={styles.bottom_elements}>
         <div className={styles.button_links}>
-          <button>
+          <button className={styles.btn}>
             <a href="https://pc-components-scss.netlify.app/" target="_blank">
               Demo
             </a>
           </button>
-          <button>
+          <button className={styles.btn}>
             <a href="https://github.com/Brnjak6/PC-Components" target="_blank">
               Source
             </a>

@@ -20,6 +20,16 @@
   }
 }
 
+[data-theme="dark"] .navbar {
+  color: $color-light;
+  &__top {
+    background: $gradient-secondary;
+  }
+  &__moving {
+    background: $color-dark;
+  }
+}
+
 .routes {
   width: 30%;
 
@@ -55,6 +65,11 @@
   @media only screen and (max-width: 700px) {
     display: none;
   }
+}
+
+[data-theme="dark"] .nav_button {
+  color: $color-theme;
+  border: 1px solid $color-theme;
 }
 
 .contact {
@@ -135,4 +150,16 @@
 .change .bar3 {
   top: 25px;
   transform: rotateZ(-320deg);
+}
+
+.nav_svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &__sun {
+    fill: $color-theme;
+  }
 }

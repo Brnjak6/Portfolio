@@ -109,6 +109,7 @@ function ContactForm({ contactActive, contactHandler }) {
 
         <form onSubmit={onSubmit}>
           <input
+            className={styles.inpt}
             type={contactButton === "Contact" ? "text" : undefined}
             name="from_name"
             placeholder="Your name"
@@ -120,6 +121,7 @@ function ContactForm({ contactActive, contactHandler }) {
             {alertName !== false ? <Alert className={styles.svg} /> : null}
           </div>
           <input
+            className={styles.inpt}
             type="text"
             name="message"
             placeholder="Your message"
@@ -131,6 +133,7 @@ function ContactForm({ contactActive, contactHandler }) {
             {alertMessage !== false ? <Alert className={styles.svg} /> : null}
           </div>
           <input
+            className={styles.inpt}
             type="text"
             name="reply_to"
             placeholder="Your email"
@@ -144,7 +147,9 @@ function ContactForm({ contactActive, contactHandler }) {
           <button
             type={contactButton === "Send" ? "submit" : "button"}
             className={
-              contactButton === "Message sent!" ? styles.message_sent : null
+              contactButton === "Message sent!"
+                ? styles.message_sent
+                : styles.btn
             }
           >
             {contactButton}

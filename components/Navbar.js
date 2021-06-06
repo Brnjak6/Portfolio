@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import BurgerMenu from "./BurgerMenu";
 import { Link } from "react-scroll";
 import ContactForm from "./ContactForm";
+import Sun from "../public/sun.svg";
+import Moon from "../public/moon.svg";
 
 const Navbar = () => {
   const [burgerActive, setBurgerActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
   const [scrollState, setScrollState] = useState("top");
+  const [isThemeDark, setIsThemeDark] = useState(false);
   let listener = null;
 
   useEffect(() => {
@@ -42,6 +45,21 @@ const Navbar = () => {
           scrollState === "top" ? "navbar__top" : "navbar__moving"
         }`}
       >
+        <div
+          onClick={() => {
+            document.documentElement.dataset.theme =
+              document.documentElement.dataset.theme === "light"
+                ? "dark"
+                : "light";
+            setIsThemeDark(!isThemeDark);
+          }}
+        >
+          {isThemeDark ? (
+            <Sun className="nav_svg nav_svg__sun" />
+          ) : (
+            <Moon className="nav_svg " />
+          )}
+        </div>
         <div className="routes">
           <ul>
             <li>

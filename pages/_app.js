@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Stjepan | Portfolio</title>
+        <title>Brnjak | Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/logo.svg" />
       </Head>
       <ThemeProvider>

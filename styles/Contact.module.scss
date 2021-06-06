@@ -15,36 +15,6 @@
     flex-direction: column;
     z-index: 10;
 
-    input {
-      font-size: 1.4rem;
-      padding: 0.7rem 0;
-      margin: 1rem 0;
-      width: 20vw;
-      background: transparent;
-      outline: none;
-      border: 2px solid $color-dark;
-      border-radius: 1.5rem;
-      padding-left: 1rem;
-
-      @media screen and (max-width: 1200px) {
-        font-size: 1.1rem;
-        width: 30vw;
-      }
-
-      @media screen and (max-width: 830px) {
-        font-size: 1.1rem;
-        width: 40vw;
-      }
-      @media screen and (max-width: 410px) {
-        width: 55vw;
-        font-size: 1.3rem;
-      }
-
-      &::placeholder {
-        opacity: 0.7;
-      }
-    }
-
     button {
       margin-top: 2rem;
     }
@@ -90,6 +60,10 @@
   height: 100%;
 }
 
+[data-theme="dark"] .clip_path {
+  background: $gradient-secondary;
+}
+
 .svg {
   height: 1.2rem;
   width: 1.2rem;
@@ -113,4 +87,17 @@
   z-index: 10;
   position: absolute;
   bottom: 5%;
+}
+
+[data-theme="dark"] .inpt {
+  border: 1px solid $color-light;
+
+  &::placeholder {
+    color: $color-light;
+  }
+}
+
+[data-theme="dark"] .btn {
+  color: $color-light;
+  border: 1px solid $color-light;
 }

@@ -150,14 +150,6 @@
   @media screen and (max-width: 500px) {
     padding: 0 1rem 0 1rem;
   }
-
-  button {
-    &:hover {
-      box-shadow: 0 0 3px $color-theme;
-      border: 1px solid $color-theme;
-      color: $color-theme;
-    }
-  }
 }
 
 .bullet_points {
@@ -219,5 +211,24 @@
     flex-direction: column !important;
     justify-content: space-around;
     margin: 5rem 0;
+  }
+}
+
+.btn {
+  color: $color-dark;
+
+  &:hover {
+    color: $color-theme;
+    border: 1px solid $color-theme;
+  }
+}
+
+[data-theme="dark"] .btn {
+  color: $color-light;
+  border: 1px solid $color-light;
+
+  &:hover {
+    color: $color-theme;
+    border: 1px solid $color-theme;
   }
 }

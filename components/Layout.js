@@ -1,11 +1,18 @@
 import Navbar from "./Navbar";
+import { motion } from "framer-motion";
+import { itemAppear } from "./Animation";
 
 const Layout = ({ children }) => {
   return (
-    <div className="content">
+    <motion.div
+      variants={itemAppear}
+      initial="hidden"
+      animate="show"
+      className="content"
+    >
       <Navbar />
       {children}
-    </div>
+    </motion.div>
   );
 };
 

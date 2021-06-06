@@ -1,19 +1,17 @@
 @import "Variables.scss";
 
-$primary: "--primary";
-$secondary: "--secondary";
-$gradient: "--gradient";
-
 :root {
   #{$primary}: $color-dark;
   #{$secondary}: $color-light;
-  #{$gradient}: linear-gradient(to right, #eacda3, #d6ae7b);
+  #{$theme}: $color-theme;
+  #{$button}: $color-dark;
 }
 
 [data-theme="dark"] {
-  #{$primary}: #444;
-  #{$secondary}: #ececec;
-  #{$gradient}: linear-gradient(to right, #eacda3, #d6ae7b);
+  #{$primary}: $color-light;
+  #{$secondary}: $color-dark;
+  #{$theme}: $color-theme;
+  #{$button}: $color-dark;
 }
 
 html,
@@ -25,7 +23,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.14rem;
   overflow-x: hidden;
-  background: $color-light;
+  background: var(--secondary);
   font-size: 100%;
 
   @media screen and (max-width: 1400px) {
@@ -56,8 +54,8 @@ button {
   outline: none;
   border: none;
   background: transparent;
-  color: $color-dark;
-  border: 1px solid $color-dark;
+  color: var(--button);
+  border: 1px solid var(--button);
   border-radius: 1.5rem;
   font-size: 1.3rem;
   padding: 0.4rem 2rem;
@@ -83,5 +81,35 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $color-theme;
+  background-color: var(--theme);
+}
+
+input {
+  font-size: 1.4rem;
+  padding: 0.7rem 0;
+  margin: 1rem 0;
+  width: 20vw;
+  background: transparent;
+  outline: none;
+  border: 2px solid var(--primary);
+  border-radius: 1.5rem;
+  padding-left: 1rem;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 1.1rem;
+    width: 30vw;
+  }
+
+  @media screen and (max-width: 830px) {
+    font-size: 1.1rem;
+    width: 40vw;
+  }
+  @media screen and (max-width: 410px) {
+    width: 55vw;
+    font-size: 1.3rem;
+  }
+
+  &::placeholder {
+    opacity: 0.7;
+  }
 }
