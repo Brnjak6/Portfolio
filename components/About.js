@@ -34,11 +34,6 @@ function About() {
           </div>
         </div>
       </div>
-      <img
-        src="/portfolio.jpg"
-        alt="profile-picture"
-        className={styles.about_pic}
-      />
     </div>
   );
 }

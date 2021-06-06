@@ -47,6 +47,7 @@
     font-size: 2.2rem;
     margin: 0;
     text-transform: uppercase;
+    color: var(--secondary);
 
     @media screen and (max-width: 950px) {
       font-size: 1.9rem;
@@ -82,23 +83,5 @@
       height: 2rem;
       width: 2rem;
     }
-  }
-}
-
-.about_pic {
-  position: absolute;
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  width: 15rem;
-  height: 18rem;
-  border-radius: 20%;
-
-  @media screen and (min-width: 820px) {
-    display: none;
-  }
-  @media screen and (max-width: 660px) {
-    display: none;
   }
 }

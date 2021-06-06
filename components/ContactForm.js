@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/ContactForm.module.scss";
 import Alert from "../public/alert.svg";
 import MailSvg from "../public/mail.svg";
-
 import { send } from "emailjs-com";
 
 function ContactForm({ contactActive, contactHandler }) {
@@ -12,7 +11,7 @@ function ContactForm({ contactActive, contactHandler }) {
   const [alertName, setAlertName] = useState(false);
   const [alertMessage, setAlertMessage] = useState(false);
   const [alertMail, setAlertMail] = useState(false);
-  const [contactButton, setContactButton] = useState("Contact");
+  const [contactButton, setContactButton] = useState("Send");
   const [isActive, setIsActive] = useState(false);
   const mailformat =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -22,6 +21,15 @@ function ContactForm({ contactActive, contactHandler }) {
     message: "",
     reply_to: "",
   });
+
+  useEffect(() => {
+    if (checkMail.length > 3) {
+      setAlertMail(false);
+    }
+    if (checkName.length > 3) {
+      setAlertName(false);
+    }
+  }, [checkMail, checkName]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -134,7 +142,7 @@ function ContactForm({ contactActive, contactHandler }) {
             {alertMail !== false ? <Alert className={styles.svg} /> : null}
           </div>
           <button
-            type={contactButton === "Contact" ? "submit" : "button"}
+            type={contactButton === "Send" ? "submit" : "button"}
             className={
               contactButton === "Message sent!" ? styles.message_sent : null
             }

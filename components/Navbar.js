@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import { Link } from "react-scroll";
 import ContactForm from "./ContactForm";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [burgerActive, setBurgerActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
-
-  useEffect(() => {
-    if (burgerActive) {
-      document.documentElement.style.overflow = "hidden";
-      document.body.scroll = "no";
-    } else {
-      document.documentElement.style.overflow = "scroll";
-      document.body.scroll = "yes";
-    }
-  }, [burgerActive]);
+  const { theme, setTheme } = useTheme();
 
   const burgerHandler = () => {
     setBurgerActive(!burgerActive);
@@ -63,7 +55,12 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        {burgerActive && <BurgerMenu burgerActive={burgerActive} />}
+        {burgerActive && (
+          <BurgerMenu
+            burgerActive={burgerActive}
+            burgerHandler={burgerHandler}
+          />
+        )}
         {contactActive && (
           <ContactForm
             contactHandler={contactHandler}

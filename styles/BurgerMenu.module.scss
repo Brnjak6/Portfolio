@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.1s all ease-in;
+  transition: 0.5s ease-out;
   clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 18%);
 
   ul {
@@ -21,16 +21,24 @@
     justify-content: center;
     flex-direction: column;
     padding: 0;
-    line-height: 4;
-    font-size: 1.4rem;
+    line-height: 2.8;
+    font-size: 1.5rem;
     font-weight: 300;
+
+    a {
+      background: $color-light;
+      clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0% 100%);
+      width: 10rem;
+      text-align: center;
+      margin: 1.5rem 0;
+      padding: 0.1rem 1rem;
+    }
   }
 
   li {
     list-style-type: none;
     text-transform: uppercase;
     font-weight: 500;
-    color: $color-light;
   }
 }
 

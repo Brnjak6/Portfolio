@@ -43,9 +43,10 @@
       padding: 0.7rem 0;
       margin: 1rem 0;
       width: 17vw;
+      height: 3rem;
       background: transparent;
       outline: none;
-      border: 2px solid $color-dark;
+      border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 1.5rem;
       padding-left: 1rem;
 
@@ -65,6 +66,11 @@
 
       &::placeholder {
         opacity: 0.7;
+      }
+
+      &:active,
+      &:focus {
+        border: 1px solid $color-dark;
       }
     }
 
@@ -120,6 +126,17 @@
   cursor: pointer;
   font-weight: 900;
   font-size: 1.3rem;
+  transition: 0.2s;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+
+  &:hover,
+  &::after {
+    color: $color-light;
+  }
 }
 
 .information {

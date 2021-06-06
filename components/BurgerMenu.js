@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/BurgerMenu.module.scss";
+import { Link } from "react-scroll";
 
-function BurgerMenu({ burgerActive }) {
+function BurgerMenu({ burgerActive, burgerHandler }) {
   const [isOpen, setIsOpen] = useState(null);
 
   useEffect(() => {
@@ -11,10 +12,38 @@ function BurgerMenu({ burgerActive }) {
   return (
     <div className={`${styles.container} ${isOpen}`}>
       <ul>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>About</li>
-        <li>Contact</li>
+        <Link
+          to="home"
+          smooth={true}
+          offset={-80}
+          onClick={() => burgerHandler(false)}
+        >
+          Home
+        </Link>
+        <Link
+          to="projects"
+          smooth={true}
+          offset={-80}
+          onClick={() => burgerHandler(false)}
+        >
+          Projects
+        </Link>
+        <Link
+          to="about"
+          smooth={true}
+          offset={-80}
+          onClick={() => burgerHandler(false)}
+        >
+          About
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          offset={-80}
+          onClick={() => burgerHandler(false)}
+        >
+          Contact
+        </Link>
       </ul>
     </div>
   );

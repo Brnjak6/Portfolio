@@ -54,6 +54,15 @@ function Contact() {
     }
   };
 
+  useEffect(() => {
+    if (checkMail.length > 3) {
+      setAlertMail(false);
+    }
+    if (checkName.length > 3) {
+      setAlertName(false);
+    }
+  }, [checkMail, checkName]);
+
   const handleChange = (e) => {
     if (e.target.name === "from_name") {
       setCheckName(e.target.value);

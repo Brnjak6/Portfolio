@@ -9,7 +9,7 @@ body {
   letter-spacing: 0.14rem;
   color: $color-dark;
   overflow-x: hidden;
-  background: #f3f3f3;
+  background: $color-light;
   font-size: 100%;
 
   @media screen and (max-width: 1400px) {
@@ -49,8 +49,8 @@ button {
   transition: 0.2s;
 
   &:hover {
-    box-shadow: 0 0 2px #000;
-    transform: translateY(-1.5px);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.411);
+    transform: translateY(-1px);
   }
 
   &:active {
