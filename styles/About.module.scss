@@ -55,6 +55,12 @@
   }
 }
 
+[data-theme="dark"] .content {
+  h1 {
+    color: $color-light;
+  }
+}
+
 .links {
   display: flex;
   align-items: center;
