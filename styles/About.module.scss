@@ -2,17 +2,12 @@
 
 .container {
   width: 100vw;
-  height: 60vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
-  margin: 8rem 0;
-
-  @media screen and (max-width: 700px) {
-    margin-top: 8rem;
-    margin-bottom: 25rem;
-  }
+  margin: 22rem 0;
+  font-size: 1.15rem;
 }
 
 .content {
