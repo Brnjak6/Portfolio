@@ -68,13 +68,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="projects" smooth={true} offset={-80}>
-                Projects
+              <Link to="about" smooth={true} offset={-80}>
+                About
               </Link>
             </li>
             <li>
-              <Link to="about" smooth={true} offset={-80}>
-                About
+              <Link to="projects" smooth={true} offset={-80}>
+                Projects
               </Link>
             </li>
           </ul>

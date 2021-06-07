@@ -23,10 +23,15 @@ function About() {
         <h1>I am Stjepan Brnjak, self taught developer from Croatia</h1>
         <p>
           Graduated technical high school of mechanical engineering and aquired
-          bachelors in economy & tourism in 2020. In the beginning of 2021 I
-          gave a try to web development and it is best choice I have made. I
-          enjoy learning web development on my own from abundant list of online
-          sources and being active member on Discord.
+          bachelors in economy & tourism in 2020. <br />
+          While I was studying I was also looking at the career options and what
+          would make me happy for my next phase in my life. In early 2021. I
+          gave a try to web development. Started by learning design and very
+          soon I was very interested in implementation of the designs. Since
+          then not a day has passed without touching VSC. Without checking
+          Discord web development communities. Without learning abundant amount
+          of new stuff that fullfill me in a totally new way. Turning my passion
+          into profession is my ultimate goal and you can be part of it.
         </p>
         <div className={styles.links}>
           <div className={styles.svg}>

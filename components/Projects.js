@@ -21,7 +21,7 @@ function Projects() {
         ref={element}
       >
         <h3 className={styles.titles_sub}>PROJECTS</h3>
-        <h1>Let us get straight into work I have done</h1>
+        <h1>Let us get into the work I have done</h1>
       </motion.div>
       <div className={styles.projects}>
         <Project1 />
