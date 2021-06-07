@@ -26,12 +26,13 @@ function About() {
           bachelors in economy & tourism in 2020. <br />
           While I was studying I was also looking at the career options and what
           would make me happy for my next phase in my life. In early 2021. I
-          gave a try to web development. Started by learning design and very
-          soon I was very interested in implementation of the designs. Since
-          then not a day has passed without touching VSC. Without checking
-          Discord web development communities. Without learning abundant amount
-          of new stuff that fullfill me in a totally new way. Turning my passion
-          into profession is my ultimate goal and you can be part of it.
+          gave a try to web development. Started by learning web design and very
+          soon I was interested in implementation of the designs. Since then not
+          a day has passed without working in Visual Studio Code. Without
+          checking Discord web development communities. Without learning
+          abundant amount of new stuff that fullfill me in a totally new way.
+          Turning my passion into profession is my ultimate goal and you can be
+          part of it.
         </p>
         <div className={styles.links}>
           <div className={styles.svg}>
