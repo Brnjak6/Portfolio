@@ -42,7 +42,7 @@ function About() {
           </div>
           <div className={styles.svg}>
             <a
-              href="https://www.linkedin.com/in/stjepan-brnjak-a224951a1/"
+              href="https://www.linkedin.com/in/stjepan-brnjak/"
               target="_blank"
             >
               <LinkedIn className={styles.svg__links} />
