@@ -5,5 +5,5 @@ Personal Portfolio
 
 Portfolio website built in NextJS
 
-Place where all my work is located in one place,
-where you can contact me and learn more about me
+Place where all my work is located.
+Place where you can contact me and learn more about me
