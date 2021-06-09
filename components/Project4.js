@@ -34,7 +34,7 @@ function Project4() {
                 : styles.first_left_absolute
             }
           >
-            <img src="/fourthproject.png" alt="third-project-picture" />
+            <img src="/fourthproject.jpg" alt="third-project-picture" />
           </div>
         </div>
         <div className={styles.first_right}>
