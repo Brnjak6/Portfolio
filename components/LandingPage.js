@@ -36,7 +36,7 @@ function LandingPage() {
         </motion.div>
         <motion.div variants={getStarted} initial="hidden" animate="show">
           <Link
-            to="about"
+            to="projects"
             smooth={true}
             offset={-80}
             className={styles.welcome_started}

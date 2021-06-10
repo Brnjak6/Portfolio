@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <LandingPage />
-      <About />
       <Projects />
+      <About />
       <Contact />
     </>
   );
