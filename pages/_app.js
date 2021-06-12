@@ -4,7 +4,7 @@ import "../styles/Main.scss";
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import * as gtag from "../library/gtag";
+import * as gtag from "../lib/gtag";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
   return (
     <>
       <Head>
