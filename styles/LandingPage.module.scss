@@ -127,6 +127,8 @@
 }
 
 .image_box {
+  --border-width: 5px;
+
   width: 25rem;
   height: 25rem;
   position: relative;
@@ -136,6 +138,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(0, 0%, 0%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(353, 77%, 24%),
+      hsl(44, 54%, 37%),
+      hsl(54, 100%, 42%),
+      hsl(64, 68%, 67%),
+      hsl(66, 100%, 85%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: 50%;
+    animation: moveGradient 4s ease-in infinite;
+  }
 }
 
 .img {
@@ -143,4 +170,10 @@
   height: 100%;
   border-radius: 50%;
   border: 2px solid $color-light;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
 }
