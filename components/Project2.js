@@ -57,14 +57,10 @@ function Project2() {
       >
         <div className={styles.button_links}>
           <button className={styles.btn}>
-            <a href="https://film-verse-react.netlify.app/" target="_blank">
-              Demo
-            </a>
+            <a href="https://film-verse-react.netlify.app/">Demo</a>
           </button>
           <button className={styles.btn}>
-            <a href="https://github.com/Brnjak6/MovieTrends" target="_blank">
-              Source
-            </a>
+            <a href="https://github.com/Brnjak6/MovieTrends">Source</a>
           </button>
         </div>
         <div className={styles.technologies}>

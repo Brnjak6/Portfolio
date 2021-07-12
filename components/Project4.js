@@ -53,20 +53,10 @@ function Project4() {
       >
         <div className={styles.button_links}>
           <button className={styles.btn}>
-            <a
-              href="https://interactive-javascript.netlify.app/"
-              target="_blank"
-            >
-              Demo
-            </a>
+            <a href="https://interactive-javascript.netlify.app/">Demo</a>
           </button>
           <button className={styles.btn}>
-            <a
-              href="https://github.com/Brnjak6/VanillaJS-PCParts"
-              target="_blank"
-            >
-              Source
-            </a>
+            <a href="https://github.com/Brnjak6/VanillaJS-PCParts">Source</a>
           </button>
         </div>
         <div className={styles.technologies}>

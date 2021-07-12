@@ -52,14 +52,10 @@ function Project1() {
       <div className={styles.bottom_elements}>
         <div className={styles.button_links}>
           <button className={styles.btn}>
-            <a href="https://widicy-e-commerce.netlify.app/" target="_blank">
-              Demo
-            </a>
+            <a href="https://widicy-e-commerce.netlify.app/">Demo</a>
           </button>
           <button className={styles.btn}>
-            <a href="https://github.com/Brnjak6/eMerch" target="_blank">
-              Source
-            </a>
+            <a href="https://github.com/Brnjak6/eMerch">Source</a>
           </button>
         </div>
         <div className={styles.technologies}>
