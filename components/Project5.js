@@ -26,7 +26,7 @@ function Project5() {
         <h3 className={styles.titles_sub}>Transformers App</h3>
         React & Modern JavaScript project
       </div>
-      <div className={styles.first} style={{ flexDirection: "row-reverse" }}>
+      <div className={styles.first}>
         <div className={styles.first_left}>
           <div
             onClick={() => setIsImageClicked(!isImageClicked)}
