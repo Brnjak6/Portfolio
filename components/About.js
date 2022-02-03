@@ -20,18 +20,12 @@ function About() {
     >
       <div className={styles.content}>
         <h3 className={styles.content_sub}>ABOUT ME</h3>
-        <h1>I am Stjepan Brnjak, self taught developer from Croatia</h1>
+        <h1>I am Stjepan Brnjak, self taught developer from Croatia. Located in Dublin</h1>
         <p>
           Graduated technical high school of mechanical engineering and aquired
-          bachelors in economy & tourism in 2020. <br />
-          While I was studying I was also looking at the career options and what
-          would make me happy for the next phase in my life. In early 2021 I
-          gave a try to web development. Started by learning web design and very
-          soon I was interested in implementation of the designs. Since then
-          coding is my every day activity, being part of Discord web development
-          community and learning abundant amount of new stuff that fullfill me
-          in a totally new way. Turning my passion into profession is my
-          ultimate goal.
+          bachelors in economy & tourism in 2020. Currently studying Software Development with a goal of 
+          turning passion into profession. <br />
+          When I am not coding, I am probably travelling to new places, meeting people from different cultures, working out, going out with friends, watching movies, etc...
         </p>
         <div className={styles.links}>
           <div className={styles.svg}>

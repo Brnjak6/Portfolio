@@ -10,9 +10,9 @@
   "dependencies": {
     "emailjs-com": "^2.6.4",
     "framer-motion": "^4.1.17",
-    "next": "10.2.3",
+    "next": "^12.0.10",
     "next-themes": "^0.0.14",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-ga": "^3.3.0",
@@ -21,6 +21,6 @@
     "validator": "^13.6.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.5.0"
+    "@svgr/webpack": "^6.2.1"
   }
 }
