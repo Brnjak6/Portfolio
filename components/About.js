@@ -23,7 +23,7 @@ function About() {
         <h1>I am Stjepan Brnjak, self taught developer from Croatia. Located in Dublin</h1>
         <p>
           Graduated technical high school of mechanical engineering and aquired
-          bachelors in economy & tourism in 2020. Currently studying Software Development with a goal of 
+          bachelors in economy & tourism in 2020. Currently studying Higher Diploma, Software Development (Part-time) with a goal of 
           turning passion into profession. <br />
           When I am not coding, I am probably travelling to new places, meeting people from different cultures, working out, going out with friends, watching movies, etc...
         </p>

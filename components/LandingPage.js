@@ -32,7 +32,7 @@ function LandingPage() {
           animate="show"
           className={styles.frontend}
         >
-          Frontend Developer
+          Software Development Student
         </motion.div>
         <motion.div variants={getStarted} initial="hidden" animate="show">
           <Link
