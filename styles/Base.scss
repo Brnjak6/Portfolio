@@ -1,4 +1,4 @@
-@import "Variables.scss";
+@import 'Variables.scss';
 
 :root {
   #{$primary}: $color-dark;
@@ -7,11 +7,11 @@
   #{$button}: $color-dark;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   #{$primary}: $color-light;
   #{$secondary}: $color-dark;
   #{$theme}: $color-theme;
-  #{$button}: $color-dark;
+  #{$button}: $color-light;
 }
 
 html,
@@ -19,7 +19,7 @@ body {
   color: var(--primary);
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   letter-spacing: 0.14rem;
   overflow-x: hidden;
@@ -69,6 +69,10 @@ button {
 
   &:active {
     transform: translateY(2px);
+  }
+
+  & a {
+    color: var(--button);
   }
 }
 

@@ -5,11 +5,11 @@ $gradient-secondary: linear-gradient(to right, #000000, #434343);
 $color-theme: #d6ae7b;
 $color-grey: rgb(126, 126, 126);
 
-$primary: "--primary";
-$secondary: "--secondary";
-$gradient: "--gradient";
-$theme: "--theme";
-$button: "--button";
+$primary: '--primary';
+$secondary: '--secondary';
+$gradient: '--gradient';
+$theme: '--theme';
+$button: '--button';
 
 @mixin s-v-g {
   width: 3rem;
