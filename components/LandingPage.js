@@ -1,16 +1,16 @@
-import React from "react";
-import Arrow from "../public/down-arrow.svg";
-import styles from "../styles/LandingPage.module.scss";
-import { Link } from "react-scroll";
-import { useScroll } from "./useScroll";
-import { motion } from "framer-motion";
+import React from 'react';
+import Arrow from '../public/down-arrow.svg';
+import styles from '../styles/LandingPage.module.scss';
+import { Link } from 'react-scroll';
+import { useScroll } from './useScroll';
+import { motion } from 'framer-motion';
 import {
   helloWorld,
   myName,
   frontEnd,
   getStarted,
   itemAppear,
-} from "./Animation";
+} from './Animation';
 
 function LandingPage() {
   const [element, controls] = useScroll();
@@ -32,7 +32,7 @@ function LandingPage() {
           animate="show"
           className={styles.frontend}
         >
-          Software Development Student
+          Aspiring Developer
         </motion.div>
         <motion.div variants={getStarted} initial="hidden" animate="show">
           <Link
