@@ -1,10 +1,10 @@
-import React from "react";
-import styles from "../styles/About.module.scss";
-import GitHub from "../public/github.svg";
-import LinkedIn from "../public/linkedin.svg";
-import { useScroll } from "./useScroll";
-import { motion } from "framer-motion";
-import { itemAppear } from "./Animation";
+import React from 'react';
+import styles from '../styles/About.module.scss';
+import GitHub from '../public/github.svg';
+import LinkedIn from '../public/linkedin.svg';
+import { useScroll } from './useScroll';
+import { motion } from 'framer-motion';
+import { itemAppear } from './Animation';
 
 function About() {
   const [element, controls] = useScroll();
@@ -20,12 +20,12 @@ function About() {
     >
       <div className={styles.content}>
         <h3 className={styles.content_sub}>ABOUT ME</h3>
-        <h1>I am Stjepan Brnjak, self taught developer from Croatia. Located in Dublin</h1>
+        <h1>I am Stjepan Brnjak, self taught developer located in Dublin.</h1>
         <p>
-          Graduated technical high school of mechanical engineering and aquired
-          bachelors in economy & tourism in 2020. Currently studying Higher Diploma, Software Development (Part-time) with a goal of 
-          turning passion into profession. <br />
-          When I am not coding, I am probably travelling to new places, meeting people from different cultures, working out, going out with friends, watching movies, etc...
+          While I am mostly self taught, currently I have a pleasure of learning
+          more through Higher Diploma in Sofware Development at National College
+          of Ireland as a Part-Time student. I am proud of what I have learned
+          so far, however even more excited to learn new things!
         </p>
         <div className={styles.links}>
           <div className={styles.svg}>

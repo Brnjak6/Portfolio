@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import styles from "../styles/Projects.module.scss";
-import Javascript from "../public/javascript.svg";
-import Html from "../public/html-5.svg";
-import Css from "../public/css.svg";
-import Sass from "../public/sass.svg";
-import Figma from "../public/figma-1.svg";
-import { useScroll } from "./useScroll";
-import { motion } from "framer-motion";
-import { itemAppear } from "./Animation";
+import React, { useState } from 'react';
+import styles from '../styles/Projects.module.scss';
+import ReactSvg from '../public/react.svg';
+import Html from '../public/html-5.svg';
+import Css from '../public/css.svg';
+import Sass from '../public/sass.svg';
+import Figma from '../public/figma-1.svg';
+import { useScroll } from './useScroll';
+import { motion } from 'framer-motion';
+import { itemAppear } from './Animation';
 
 function Project3() {
   const [isImageClicked, setIsImageClicked] = useState(false);
@@ -22,8 +22,8 @@ function Project3() {
       className={styles.project_one}
     >
       <div className={styles.project_title}>
-        <h3 className={styles.titles_sub}>Go-Master</h3>
-        Beginner's guide to PC components
+        <h3 className={styles.titles_sub}>Blogr Landing Page</h3>
+        Frontend Mentor Challenge
       </div>
       <div className={styles.first}>
         <div className={styles.first_left}>
@@ -35,34 +35,41 @@ function Project3() {
                 : styles.first_left_absolute
             }
           >
-            <img src="/thirdproject.png" alt="third-project-picture" />
+            <img src="/mentor.png" alt="third-project-picture" />
           </div>
         </div>
         <div className={styles.first_right}>
           <div className={styles.bullet_points}>
-            <li>Writing HTML code with BEM methodology</li>
-            <li>Using SASS variables and mixins</li>
-            <li>Vanilla JS is used for event listeners</li>
-            <li>Design created in Figma</li>
-            <li>CSS Grid is used for main layout </li>
-            <li>Flexbox wrapping for simple responsitivity</li>
-            <li>Responsive across all devices</li>
+            <li>Converting design to live website</li>
+            <li>Implementing both mobile and desktop designs</li>
+            <li>Segmenting project into ReactJS components</li>
+            <li>Heavy use of JSX and SCSS</li>
+
+            <li>
+              Original challenge link available{' '}
+              <a
+                style={{ color: 'blue' }}
+                href="https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP"
+              >
+                here
+              </a>{' '}
+            </li>
           </div>
         </div>
       </div>
       <div className={styles.bottom_elements}>
         <div className={styles.button_links}>
           <button className={styles.btn}>
-            <a href="https://pc-components-scss.netlify.app/">Demo</a>
+            <a href="https://blogr-challenge-stjepan.netlify.app/">Demo</a>
           </button>
           <button className={styles.btn}>
-            <a href="https://github.com/Brnjak6/PC-Components">Source</a>
+            <a href="https://github.com/Brnjak6/frontendmentor_blogr">Source</a>
           </button>
         </div>
         <div className={styles.technologies}>
           <Html className={styles.svgs} />
           <Css className={styles.svgs} />
-          <Javascript className={styles.svgs} />
+          <ReactSvg className={styles.svgs} />
           <Sass className={styles.svgs} />
           <Figma className={styles.svgs} />
         </div>
