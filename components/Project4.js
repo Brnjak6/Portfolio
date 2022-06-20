@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styles from "../styles/Projects.module.scss";
-import Javascript from "../public/javascript.svg";
-import Html from "../public/html-5.svg";
-import Css from "../public/css.svg";
-import Sass from "../public/sass.svg";
-import { useScroll } from "./useScroll";
-import { motion } from "framer-motion";
-import { itemAppear } from "./Animation";
+import React, { useState } from 'react';
+import styles from '../styles/Projects.module.scss';
+import Javascript from '../public/javascript.svg';
+import Html from '../public/html-5.svg';
+import Css from '../public/css.svg';
+import Sass from '../public/sass.svg';
+import { useScroll } from './useScroll';
+import { motion } from 'framer-motion';
+import { itemAppear } from './Animation';
 
 function Project4() {
   const [isImageClicked, setIsImageClicked] = useState(false);
@@ -24,7 +24,7 @@ function Project4() {
         <h3 className={styles.titles_sub}>Tech & Challenges</h3>
         Vanilla JavaScript and DOM Manipulation
       </div>
-      <div className={styles.first} style={{ flexDirection: "row-reverse" }}>
+      <div className={styles.first}>
         <div className={styles.first_left}>
           <div
             onClick={() => setIsImageClicked(!isImageClicked)}
@@ -49,7 +49,7 @@ function Project4() {
       </div>
       <div
         className={styles.bottom_elements}
-        style={{ flexDirection: "row-reverse" }}
+        style={{ flexDirection: 'row-reverse' }}
       >
         <div className={styles.button_links}>
           <button className={styles.btn}>
