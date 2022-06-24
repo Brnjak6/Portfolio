@@ -25,7 +25,7 @@ function Project3() {
         <h3 className={styles.titles_sub}>Blogr Landing Page</h3>
         Frontend Mentor Challenge
       </div>
-      <div className={styles.first} style={{ flexDirection: 'row-reverse' }}>
+      <div className={styles.first}>
         <div className={styles.first_left}>
           <div
             onClick={() => setIsImageClicked(!isImageClicked)}

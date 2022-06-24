@@ -23,10 +23,10 @@ function Project5() {
       className={styles.project_one}
     >
       <div className={styles.project_title}>
-        <h3 className={styles.titles_sub}>Transformers App</h3>
-        React & Modern JavaScript project
+        <h3 className={styles.titles_sub}>JavaScript Quiz</h3>
+        Full stack app created in GitHub collaboration
       </div>
-      <div className={styles.first} style={{ flexDirection: 'row-reverse' }}>
+      <div className={styles.first}>
         <div className={styles.first_left}>
           <div
             onClick={() => setIsImageClicked(!isImageClicked)}
@@ -36,31 +36,26 @@ function Project5() {
                 : styles.first_left_absolute
             }
           >
-            <img src="/transformers.jpg" alt="transformers-project-picture" />
+            <img src="/quiz.png" alt="quiz-project-picture" />
           </div>
         </div>
         <div className={styles.first_right}>
           <div className={styles.bullet_points}>
-            <li>Heavy usage of ES6 JavaScript</li>
-            <li> Highly interactive and dynamic</li>
-            <li>Common usage of array & array methods</li>
-            <li>Design created in Figma</li>
+            <li>Git collaboration between frontend and backend</li>
+            <li>Creating frontend JS logic</li>
+            <li>Making JavaScript questions</li>
+            <li>Designed in Figma</li>
             <li>Styled with SASS and media queries</li>
           </div>
         </div>
       </div>
-      <div
-        className={styles.bottom_elements}
-        style={{ flexDirection: 'row-reverse' }}
-      >
+      <div className={styles.bottom_elements}>
         <div className={styles.button_links}>
           <button className={styles.btn}>
-            <a href="https://transformers-cyberbase.netlify.app/">Demo</a>
+            <a href="https://javascript10questions.web.app/scoreboard">Demo</a>
           </button>
           <button className={styles.btn}>
-            <a href="https://github.com/Brnjak6/Transformers-React-Project">
-              Source
-            </a>
+            <a href="https://github.com/Brnjak6/JavaScript-Quiz">Source</a>
           </button>
         </div>
         <div className={styles.technologies}>

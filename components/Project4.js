@@ -24,7 +24,7 @@ function Project4() {
         <h3 className={styles.titles_sub}>Tech & Challenges</h3>
         Vanilla JavaScript and DOM Manipulation
       </div>
-      <div className={styles.first}>
+      <div className={styles.first} style={{ flexDirection: 'row-reverse' }}>
         <div className={styles.first_left}>
           <div
             onClick={() => setIsImageClicked(!isImageClicked)}

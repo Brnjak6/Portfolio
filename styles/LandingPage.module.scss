@@ -1,4 +1,4 @@
-@import "Variables.scss";
+@import 'Variables.scss';
 
 .container {
   position: relative;
@@ -11,7 +11,7 @@
   clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
 }
 
-[data-theme="dark"] .container {
+[data-theme='dark'] .container {
   background: $gradient-secondary;
 }
 
@@ -63,11 +63,11 @@
   }
 }
 
-[data-theme="dark"] .welcome_started {
+[data-theme='dark'] .welcome_started {
   color: $color-light;
 }
 
-[data-theme="dark"] .welcome_started_arrow {
+[data-theme='dark'] .welcome_started_arrow {
   fill: $color-light;
 }
 
@@ -107,7 +107,7 @@
   }
 }
 
-[data-theme="dark"] .frontend {
+[data-theme='dark'] .frontend {
   color: $color-dark;
   font-weight: 300;
 }
@@ -142,7 +142,7 @@
 
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     top: calc(-1 * var(--border-width));
     left: calc(-1 * var(--border-width));
     z-index: -1;
@@ -150,10 +150,10 @@
     height: calc(100% + var(--border-width) * 2);
     background: linear-gradient(
       60deg,
-      hsl(0, 0%, 0%),
-      hsl(269, 85%, 66%),
-      hsl(314, 85%, 66%),
-      hsl(353, 77%, 24%),
+      hsl(0, 0%, 100%),
+      hsl(0, 0%, 85%),
+      hsl(0, 0%, 63%),
+      hsl(0, 0%, 47%),
       hsl(44, 54%, 37%),
       hsl(54, 100%, 42%),
       hsl(64, 68%, 67%),

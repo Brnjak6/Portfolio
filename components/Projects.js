@@ -1,13 +1,14 @@
-import React from "react";
-import styles from "../styles/Projects.module.scss";
-import Project1 from "./Project1";
-import Project2 from "./Project2";
-import Project3 from "./Project3";
-import Project4 from "./Project4";
-import Project5 from "./Project5";
-import { useScroll } from "./useScroll";
-import { motion } from "framer-motion";
-import { itemAppear } from "./Animation";
+import React from 'react';
+import styles from '../styles/Projects.module.scss';
+import Project1 from './Project1';
+import Project2 from './Project2';
+import Project3 from './Project3';
+import Project4 from './Project4';
+import Project5 from './Project5';
+import Project6 from './Project6';
+import { useScroll } from './useScroll';
+import { motion } from 'framer-motion';
+import { itemAppear } from './Animation';
 
 function Projects() {
   const [element, controls] = useScroll();
@@ -26,8 +27,9 @@ function Projects() {
       </motion.div>
       <div className={styles.projects}>
         <Project1 />
-        <Project2 />
         <Project5 />
+        <Project6 />
+        <Project2 />
         <Project3 />
         <Project4 />
       </div>
