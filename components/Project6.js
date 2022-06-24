@@ -52,7 +52,7 @@ function Project5() {
       <div className={styles.bottom_elements}>
         <div className={styles.button_links}>
           <button className={styles.btn}>
-            <a href="https://javascript10questions.web.app/scoreboard">Demo</a>
+            <a href="https://javascript10questions.web.app/">Demo</a>
           </button>
           <button className={styles.btn}>
             <a href="https://github.com/Brnjak6/JavaScript-Quiz">Source</a>
