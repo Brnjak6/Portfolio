@@ -21,7 +21,7 @@ function Project1() {
     >
       <div className={styles.project_title}>
         <h3 className={styles.titles_sub}>Widicy</h3>
-        E-commerce website
+        E-commerce website (API outdated)
       </div>
       <div className={styles.first}>
         <div className={styles.first_left}>

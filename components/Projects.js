@@ -26,12 +26,13 @@ function Projects() {
         <h1>Let us get straight into the work I have done</h1>
       </motion.div>
       <div className={styles.projects}>
-        <Project1 />
         <Project5 />
         <Project6 />
         <Project2 />
         <Project3 />
         <Project4 />
+        <Project1 />
+
       </div>
     </div>
   );
