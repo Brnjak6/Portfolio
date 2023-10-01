@@ -20,7 +20,7 @@ function About() {
     >
       <div className={styles.content}>
         <h3 className={styles.content_sub}>ABOUT ME</h3>
-        <h1>I am Stjepan Brnjak, self taught developer located in Dublin.</h1>
+        <h1>I am Stjepan Brnjak, software development graduate</h1>
         <p>
           While I am mostly self taught, currently I have a pleasure of learning
           more through Higher Diploma in Sofware Development at National College
