@@ -9,6 +9,7 @@ import Project6 from './Project6';
 import { useScroll } from './useScroll';
 import { motion } from 'framer-motion';
 import { itemAppear } from './Animation';
+import Project7 from './Project7';
 
 function Projects() {
   const [element, controls] = useScroll();
@@ -26,6 +27,7 @@ function Projects() {
         <h1>Let us get straight into the work I have done</h1>
       </motion.div>
       <div className={styles.projects}>
+        <Project7/>
         <Project5 />
         <Project6 />
         <Project2 />
