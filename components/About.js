@@ -20,12 +20,16 @@ function About() {
     >
       <div className={styles.content}>
         <h3 className={styles.content_sub}>ABOUT ME</h3>
-        <h1>I am Stjepan Brnjak, software development graduate</h1>
+        <h1>I am Stjepan Brnjak, IT student</h1>
         <p>
-          While I am mostly self taught, currently I have a pleasure of learning
-          more through Higher Diploma in Sofware Development at National College
-          of Ireland as a Part-Time student. I am proud of what I have learned
-          so far, however even more excited to learn new things!
+          I’m currently pursuing my MSc in Software Design with Cloud Native
+          Computing while building on my foundation in technology through a
+          Higher Diploma in Software Development at the National College of
+          Ireland. My background in sales has equipped me with strong
+          communication and problem-solving skills, enabling me to effectively
+          understand and meet client needs. I’m excited to combine my technical
+          knowledge and customer-oriented approach as I embark on new adventures
+          in the tech industry.
         </p>
         <div className={styles.links}>
           <div className={styles.svg}>
