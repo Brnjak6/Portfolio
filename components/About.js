@@ -20,16 +20,16 @@ function About() {
     >
       <div className={styles.content}>
         <h3 className={styles.content_sub}>ABOUT ME</h3>
-        <h1>I am Stjepan Brnjak, IT student</h1>
+        <h1>I am Stjepan Brnjak, Tech & Sales</h1>
         <p>
-          I’m currently pursuing my MSc in Software Design with Cloud Native
-          Computing while building on my foundation in technology through a
-          Higher Diploma in Software Development at the National College of
-          Ireland. My background in sales has equipped me with strong
-          communication and problem-solving skills, enabling me to effectively
-          understand and meet client needs. I’m excited to combine my technical
-          knowledge and customer-oriented approach as I embark on new adventures
-          in the tech industry.
+          I’m an ambitious sales professional with a strong background in
+          customer service and a good understanding of IT. Over the years, I’ve
+          developed excellent communication skills and a problem-solving
+          approach that helps me understand client needs and deliver on them. I
+          also have a Higher Diploma in Software Development, which gives me a
+          solid technical base to work with. Combining this with my sales
+          experience, I’m excited to take on new opportunities in the tech
+          industry and use my skills to make a real impact.
         </p>
         <div className={styles.links}>
           <div className={styles.svg}>
